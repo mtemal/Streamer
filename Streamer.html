@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title> Streamer</title>
+  
+
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+</head>
+
+
+ <style>
+video {
+  width: 50%;
+  float: left;
+}
+</style>
+
+<body>
+  <h1> Stream 1</h1>
+
+<video-js id="Stream1" class="vjs-default-skin" controls preload="auto" >
+    <source src="http://10.X.X.0:8080/video/video0/IndexFile.m3u8" type="application/x-mpegURL">
+  </video-js>
+
+  <h1> Stream 2</h1>
+
+  <video-js id="Stream2" class="vjs-default-skin" controls preload="auto" >
+    <source src="http://10.X.X.0:8080/video/video1/IndexFile.m3u8" type="application/x-mpegURL">
+  </video-js>  
+
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
+
+
+
+  
+  <script>
+    var player = videojs('Stream1');
+    var player = videojs('Stream2');
+  </script>
+  
+</body>
+</html>
